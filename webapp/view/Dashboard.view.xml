@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:f="sap.ui.layout.form" controllerName="EmployeeLoginEmployeeLogin.controller.Dashboard">
+	<App id="app">
+		<pages>
+			<Page title="Employee Dashboard">
+				<content>
+					<VBox class="sapUiSmallMargin">
+						<Table id="empdetails" headerText="Profile" items="{/}">
+							<columns>
+								<Column>
+									<Label text="Employee ID"/>
+								</Column>
+								<Column>
+									<Label text="Employee Name"/>
+								</Column>
+								<Column>
+									<Label text="Gender"/>
+								</Column>
+								<Column>
+									<Label text="Age"/>
+								</Column>
+								<Column>
+									<Label text="Designation"/>
+								</Column>
+								<Column>
+									<Label text="Experience"/>
+								</Column>
+								<Column>
+									<Label text="DOJ"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{empId}"/>
+										<Text text="{empName}"/>
+										<Text text="{empGender}"/>
+										<Text text="{empAge}"/>
+										<Text text="{empDesignation}"/>
+										<Text text="{empExperience}"/>
+										<Text text="{empDoj}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+					<html:hr></html:hr>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button type="Reject" text="Logout" press="onBack"/>
+						</HBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,32 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZEMPLOGINPORTAL_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="EMPLOYEE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Empid"/>
+                </Key>
+                <Property Name="Empid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="EMP NUM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="EMPNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gender" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Gender" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Age" Type="Edm.Byte" Nullable="false" sap:label="EMPAGE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Designation" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="DESIGNATION" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Experience" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="EXPERIENCE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Doj" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Date of Joining" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Salary" Type="Edm.Int32" Nullable="false" sap:label="SALARY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Username" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Password" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="PASSWORD" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZEMPLOGINPORTAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="EMPLOYEESet" EntityType="ZEMPLOGINPORTAL_SRV.EMPLOYEE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZEMPLOGINPORTAL_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZEMPLOGINPORTAL_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
